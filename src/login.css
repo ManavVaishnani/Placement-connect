@@ -1,0 +1,134 @@
+    @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+    @import url('https://fonts.cdnfonts.com/css/baloo-tammudu-2');
+    .circle {
+        background-color: #802bb1;
+        border-radius: 475px;
+        height: 950px;
+        left: -400px;
+        position: absolute;
+        top: -52px;
+        width: 950px;
+    }
+    .ellipse {
+        background-color: #ffffff;
+        border-radius: 207px/206px;
+        height: 412px;
+        left: 225px;
+        position: relative;
+        top: 269px;
+        width: 414px;
+    }
+    /* Base styles */
+    .element-login-page {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .element-login-page .div {
+        background-color: #ffffff;
+        height: 827px;
+        position: relative;
+        width: 100%;
+        /* Adjusted to be responsive */
+        max-width: 1532px;
+        /* Added max-width */
+    }
+
+
+    .element-login-page .text-wrapper {
+        color: #2d2823;
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 96px;
+        font-weight: 700;
+        left: 69%;
+        transform: translateX(-50%);
+        letter-spacing: 0;
+        line-height: normal;
+        position: absolute;
+        top: 120px;
+        white-space: nowrap;
+        width: 100%;
+        /* Adjusted to be responsive */
+        max-width: 320px;
+        /* Added max-width */
+    }
+
+    .user-id-input {
+        height: 49px;
+        border-color: #802bb1;
+        filter: blur(0.5px);
+        border-radius: 4px;
+        padding: 8px;
+        margin-top: 273px;
+        width: 100%;
+        max-width: 520px;
+        box-sizing: border-box;
+        font-family: 'Baloo Tammudu 2',sans-serif;
+        font-size: 20px;
+        margin-left: 69%;
+        transform: translateX(-50%);
+    }
+
+    .password-input {
+        height: 49px;   
+        border-color: #802bb1;
+        filter: blur(0.5px);
+        border-radius: 4px;
+        padding: 8px;
+        margin-top: 42px;
+        width: 100%;
+        max-width: 520px;
+        box-sizing: border-box;
+        font-size: 20px;
+        font-family: 'Baloo Tammudu 2', sans-serif;
+        margin-left: 69%;
+        transform: translateX(-50%);
+    }
+
+    .login-btn {
+        height: 49px;
+        border-color: rgb(162, 58, 221);
+        border-radius: 4px;
+        padding: 8px;
+        margin-top: 42px;
+        width: 100%;
+        max-width: 520px;
+        box-sizing: border-box;
+        font-size: 20px;
+        margin-left: 69%;
+        transform: translateX(-50%);
+        font-family: 'Baloo Tammudu 2', sans-serif;
+        background-color: rgb(162, 58, 221);
+        color :#ffffff;
+        cursor: pointer;
+    }
+   
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 768px) {
+        .element-login-page .text-wrapper {
+            font-size: 48px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .element-login-page .text-wrapper {
+            font-size: 36px;
+        }
+
+        .user-id-input {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .body{
+        
+        overflow-x: hidden;
+        overflow-y: hidden;
+        
+    }

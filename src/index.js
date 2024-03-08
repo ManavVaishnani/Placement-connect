@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 
 import { ElementLoginPage } from './login';
-import { ElementLoginSuccessfull } from './loginSucces';
+// import { ElementLoginSuccessfull } from './loginSucces';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ElementLoginSuccessfull/>
+    <ElementLoginPage/>
   </React.StrictMode>
 );
 

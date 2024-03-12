@@ -19,7 +19,7 @@ export const Personal = () => {
                 <input type="radio" name="gender" id="female" value="female"required/>Female<br/>
             </div>
             <div className="next">
-                <button className="nextpage">Next</button>
+                {/* <button className="nextpage">Next</button> */}
             </div>
         </div>
     );

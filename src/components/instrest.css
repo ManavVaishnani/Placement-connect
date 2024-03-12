@@ -1,0 +1,32 @@
+/* personalProfile.css */
+
+.interest-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .submitBtn {
+    background-color: #802BB1;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitBtn:hover {
+    background-color: #802BB1;
+  }
+  

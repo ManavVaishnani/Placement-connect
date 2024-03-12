@@ -44,7 +44,7 @@ export const Education = () => {
             </div>
 
             <div className="next">
-                <button className="nextpage">Next</button>
+                {/* <button className="nextpage">Next</button> */}
             </div>
         </div>
     );

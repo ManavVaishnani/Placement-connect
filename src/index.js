@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import {ProfileForm} from './personalProfile';
+import {Personal} from './components/personal';
+import {Contact} from './components/contact';
+import {Education} from './components/education';
+import {Progress} from './components/progress';
 
 import { ElementLoginPage } from './login';
 // import { ElementLoginSuccessfull } from './loginSucces';
@@ -10,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ElementLoginPage/>
+    <ProfileForm/>
   </React.StrictMode>
 );
 

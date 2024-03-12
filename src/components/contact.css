@@ -1,0 +1,38 @@
+.contact{
+    margin-top: 50vh;
+    margin-left: 100px;
+    display: flex;
+}
+
+.contact input{
+    text-decoration: none;
+    border-bottom-color: #802BB1;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 20px;
+    margin: 10px 0px 0px 10px;
+}
+
+.contact label{
+    font-size: 20px;
+}
+.contact button{
+    background-color: #802BB1; 
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 150px;
+    margin-left: 600px;
+    cursor: pointer;
+}
+
+.contact button:hover{
+    background-color: #ebebeb;
+    color: black;
+}

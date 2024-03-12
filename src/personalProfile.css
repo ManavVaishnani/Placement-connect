@@ -1,0 +1,150 @@
+body{
+  display: flex;
+  align-items: center;
+  /* margin: 20px; */
+
+}
+
+.profile-form{
+  margin-top: 50px;
+  margin-left: 100px;
+  
+}
+.profilePhoto{
+    float: left;
+    width: 210px;
+    height: 230px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+.basicInfo{
+    /* float: right; */
+  margin-left: 230px;
+  /* display: inline-flex;  */
+}
+
+/* button{
+  margin-left: 10px;
+} */
+#edit{
+  background-color: #ebebeb; /* Green */
+  border: none;
+  border-radius: 7px;
+  color: black;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#save{
+  background-color: #802BB1; 
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#save:hover{
+  background-color: #ebebeb;
+  color: black;
+}
+.buttonGroup{
+  margin-left: 90px;
+}
+.buttonGroup button{
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #802BB1; 
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonGroup button:hover{
+  background-color: #ebebeb; 
+  color: black;
+}
+/* #personal{
+  background-color: #802BB1; 
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 0px;
+}
+
+#contact{
+  background-color: #802BB1; 
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#education{
+  background-color: #802BB1; 
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#progress{
+  background-color: #802BB1; 
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+#interest{
+  background-color: #802BB1; 
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+} */
+
+/* #save:hover {
+  background-color;
+} */
+
+  

@@ -1,0 +1,52 @@
+.progress{
+    margin-top: 50vh;
+    margin-left: 100px;
+    display: flex;
+}
+
+.progress input{
+    text-decoration: none;
+    border-bottom-color: #802BB1;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 15px;
+    margin: 10px 0px 0px 10px;
+}
+
+.progress label{
+    font-size: 20px;
+}
+.progress button{
+    background-color: #802BB1; 
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin-top: 150px; */
+    /* margin-left: 300px; */
+    cursor: pointer;
+}
+
+.addProject{
+    margin-left: 600px;
+}
+
+.save{
+    margin-left: 600px;
+    margin-top: 200px;
+    margin-right: 10px;
+}
+
+/* .next{
+    margin-left: 10px;
+} */
+
+.progress button:hover{
+    background-color: #ebebeb;
+    color: black;
+}

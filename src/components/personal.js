@@ -1,5 +1,6 @@
 import React from "react";
-import './personal.css'
+import './personal.css';
+
 export const Personal = () => {
     return(
         <div className="personal">
@@ -19,7 +20,7 @@ export const Personal = () => {
                 <input type="radio" name="gender" id="female" value="female"required/>Female<br/>
             </div>
             <div className="next">
-                {/* <button className="nextpage">Next</button> */}
+                <button className="save">save</button>
             </div>
         </div>
     );

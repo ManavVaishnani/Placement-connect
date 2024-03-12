@@ -36,3 +36,14 @@
     background-color: #ebebeb;
     color: black;
 }
+
+.save{
+    margin-left: 600px;
+    margin-top: 200px;
+    margin-right: 10px;
+}
+
+.save:hover{
+    background-color: #ebebeb;
+    color: black;
+}

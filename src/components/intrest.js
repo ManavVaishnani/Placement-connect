@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import "./instrest.css";
 export const Intrest = () => {
   const technologyOptions = [
     "HTML5",
@@ -111,48 +110,57 @@ export const Intrest = () => {
     "Technical Sales Engineer",
     "Embedded Systems Engineer",
   ];
-  const [selectedTechnology, setSelectedTechnology] = useState("");
-  const [selectedJobProfile, setSelectedJobProfile] = useState("");
+  const [selectedTechnologies, setSelectedTechnologies] = useState([]);
+  const [selectedJobProfiles, setSelectedJobProfiles] = useState([]);
+
+  const handleTechnologyChange = (e) => {
+    const selectedOptions = Array.from(e.target.selectedOptions, (option) => option.value);
+    setSelectedTechnologies(selectedOptions);
+  };
+
+  const handleJobProfileChange = (e) => {
+    const selectedOptions = Array.from(e.target.selectedOptions, (option) => option.value);
+    setSelectedJobProfiles(selectedOptions);
+  };
 
   const handleInterestSubmit = () => {
-    // Handle the submission logic here based on selectedTechnology and selectedJobProfile
-    console.log("Submitted:", selectedTechnology, selectedJobProfile);
+    console.log("Submitted Technologies:", selectedTechnologies);
+    console.log("Submitted Job Profiles:", selectedJobProfiles);
   };
 
   return (
     <div className="interest-container">
       <h3>Interest Page</h3>
-      <label htmlFor="technologyDropdown">Select Technology:</label>
-      <select
-        id="technologyDropdown"
-        value={selectedTechnology}
-        onChange={(e) => setSelectedTechnology(e.target.value)}
-      >
-        <option value="" disabled>
-          Choose a technology
-        </option>
-        {technologyOptions.map((tech, index) => (
-          <option key={index} value={tech}>
-            {tech}
-          </option>
-        ))}
-      </select>
 
-      <label htmlFor="jobProfileDropdown">Select Job Profile:</label>
-      <select
-        id="jobProfileDropdown"
-        value={selectedJobProfile}
-        onChange={(e) => setSelectedJobProfile(e.target.value)}
-      >
-        <option value="" disabled>
-          Choose a job profile
-        </option>
-        {jobProfileOptions.map((profile, index) => (
-          <option key={index} value={profile}>
-            {profile}
-          </option>
-        ))}
-      </select>
+      <div>
+        <label>Choose Technologies:</label>
+        <select
+          multiple
+          value={selectedTechnologies}
+          onChange={handleTechnologyChange}
+        >
+          {technologyOptions.map((tech, index) => (
+            <option key={index} value={tech}>
+              {tech}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label>Choose Job Profiles:</label>
+        <select
+          multiple
+          value={selectedJobProfiles}
+          onChange={handleJobProfileChange}
+        >
+          {jobProfileOptions.map((profile, index) => (
+            <option key={index} value={profile}>
+              {profile}
+            </option>
+          ))}
+        </select>
+      </div>
 
       <button className="submitBtn" onClick={handleInterestSubmit}>
         Submit

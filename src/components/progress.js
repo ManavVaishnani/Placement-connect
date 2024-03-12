@@ -30,7 +30,6 @@ export const Progress = () => {
             <div className="next">
                 <button className="addProject">Add Project</button><br />
                 <button className="save">save</button>
-                <button className="nextpage">Next</button>
             </div>
         </div>
 

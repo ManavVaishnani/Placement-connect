@@ -20,7 +20,7 @@ export const Contact = () =>{
                 <input type="text" name="pin" id="pin" placeholder="362001" required/> <br />
             </div>
             <div className="next">
-                {/* <button className="nextpage">Next</button> */}
+                <button className="save">save</button>
             </div>
         </div>
     );

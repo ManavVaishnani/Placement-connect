@@ -36,7 +36,17 @@ export const ProfileForm = () => {
 
   return (
     <div>
-      <div className="profile-form"></div>
+      <div className="profile-form">
+          <div className='profilePhoto'>
+          </div>
+          <div className='basicInfo'>
+              <h4>Manav Bhaveshbhai Vaishnani</h4>
+              <h4>D22CS091</h4>
+              <h4>15/12/2003</h4>
+          </div>
+          <button id='edit' type="submit">Edit</button>
+          <button id='save' type="submit">Save</button>
+      </div>
       <br />
       <div className="buttonGroup">
         {views.map((view, index) => (
@@ -50,11 +60,16 @@ export const ProfileForm = () => {
         ))}
       </div>
       {renderComponent()}
+      {/* <div className="save">
+        <button className="savepage">
+          Save
+        </button>
+      </div>
       <div className="next">
         <button className="nextpage" onClick={handleNext}>
           Next
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

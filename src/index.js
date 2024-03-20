@@ -7,7 +7,7 @@ import {Personal} from './components/personal';
 import {Contact} from './components/contact';
 import {Education} from './components/education';
 import {Progress} from './components/progress';
-
+import {Remarks} from './remarksForStudents'
 import { ElementLoginPage } from './login';
 // import { ElementLoginSuccessfull } from './loginSucces';
 import reportWebVitals from './reportWebVitals';
@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProfileForm/>
+    <Remarks/>
   </React.StrictMode>
 );
 

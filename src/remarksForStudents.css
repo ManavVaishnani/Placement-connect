@@ -1,0 +1,55 @@
+body{
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+/* .remarks{
+    display: flex;
+} */
+.idandname{
+    display: flex;
+    /* margin-top: 20px; */
+}
+
+.idandname2{
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.profile{
+    margin-left: 700px;
+}
+
+.addRemark{
+    margin-left: 10px;
+}
+
+.name{
+    margin-left: 150px;
+}
+
+button{
+    background-color: #802BB1; 
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 0px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ebebeb; 
+    color: black;
+}
+
+.remarks-container {
+    max-height: 90vh; /* Set your desired height */
+    overflow-y: auto; /* Enable vertical scroll */
+}

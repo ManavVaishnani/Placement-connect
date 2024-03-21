@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-export const Intrest = () => {
+export const Interest = () => {
   const technologyOptions = [
     "HTML5",
     "C++",
@@ -169,4 +169,4 @@ export const Intrest = () => {
   );
 };
 
-export default Intrest;
+export default Interest;

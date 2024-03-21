@@ -1,23 +1,45 @@
 import React, { useState } from "react"
 import "./login.css"
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    
-} from "react-router-dom";
-
-
-export const ElementLoginPage = (userId) => {
+import { useNavigate } from 'react-router-dom';   
+export const Login = (userId) => {
     const [isInputFocused, setIsInputFocused] = useState(false);
     const[isPressed, setIsPressed] = useState(false);
-    const handleLogin = () => {
-    // Your login logic here
-    // For now, let's simulate a successful login and navigate to loginSuccess
-    setIsPressed(true);
-    
-  };
-
+    const [loggedIn, setLoggedIn] = useState(false);
+    const navigate = useNavigate(); 
+    const [emailPass, setEmailpass] = useState({
+      email:"",
+      passWord:""
+  });
+  
+    async function handleLogin (){
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailPass),
+      }).then(response => response.json())
+      .then(data => {
+        console.log("x = ",data);
+        
+        setLoggedIn(true);
+        if(data!=0){
+          localStorage.setItem('student_id', data['Collage_id']);
+          localStorage.setItem('firstName', data['firstName']);
+          localStorage.setItem('lastName', data['lastName']);
+          navigate("/career")
+        }
+        
+      }).catch((error) => {
+        console.error('Error:', error);
+      });
+    };
+    const handleInput = (e)=>{
+      const { name, value } = e.target;
+      setEmailpass({
+      ...emailPass,
+      [name]: value
+    })};
   const handleFocus = () => {
     setIsInputFocused(true);
   };
@@ -42,41 +64,36 @@ export const ElementLoginPage = (userId) => {
       <input
         type="text"
         id="userId"
+        name="email"
         placeholder="Enter your College ID"
         className="user-id-input"
         onFocus={handleFocus}
         onBlur={handleBlur}
+        onInput={handleInput}
         required
       />
 
-    </div>
-
-    
-    <div>
-        <input
-            type="password"
-            id="passWord"
-            placeholder="Password"
-            className="password-input"
-            required
-
-        /> 
-    </div>
-    <div>
-        <button type="submit" title="Login" className={`login-btn ${isPressed?'pressed' : ''}`} onClick={()=>
-        {
-          setIsPressed(true);
-          handleLogin();
-        }
-        } 
-        >
-     LOGIN
-         </button>
-    </div>
-        
-        
-        
+      </div>
+      <div>
+          <input
+              type="password"
+              id="passWord"
+              name="passWord"
+              placeholder="Password"
+              className="password-input"
+              required
+              onInput={handleInput}
+          /> 
+      </div>
+      <div>
+          <button type="submit" title="Login" className={`login-btn ${isPressed?'pressed' : ''}`} onClick={handleLogin} >
+      LOGIN
+          </button>
+      </div>
+      
       </div>
     </div>
   );
 };
+
+export default Login;

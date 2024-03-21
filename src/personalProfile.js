@@ -1,28 +1,62 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./personalProfile.css";
 import { Progress } from "./components/progress";
 import { Personal } from "./components/personal";
 import { Contact } from "./components/contact";
 import { Education } from "./components/education";
-import { Intrest } from "./components/intrest"; 
+import { Interest } from "./components/intrest"; 
+
 const views = ["personal", "contact", "education", "progress", "interest"];
 
 export const ProfileForm = () => {
   const [currentViewIndex, setCurrentViewIndex] = useState(0);
+  const [formData, setFormData] = useState({});
+  // Update form data based on view
+  const updateFormData = (data) => {
+    setFormData((formData) => ({
+      ...formData,
+      [views[currentViewIndex]]: data
+    }));
+  };
 
+  // Handle click on save button
+  const handleSave = () => {
+    // Send formData to backend
+    console.log("Form Data:", formData);
+    // Here you can send formData to the backend using fetch or any other method
+  };
+  const fetchdata = () => {
+    fetch('http://localhost:5000/api/get_contact_info?id=21cs002', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }).then(response => response.json())
+        .then(data => {
+          
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+      
+    // Effect to fetch personal data when the component mounts
+    useEffect(() => {
+      fetchdata();
+    }, []);
   const renderComponent = () => {
     const currentView = views[currentViewIndex];
     switch (currentView) {
       case "contact":
-        return <Contact />;
+        return <Contact onDataUpdate={updateFormData} />;
       case "education":
-        return <Education />;
+        return <Education onDataUpdate={updateFormData} />;
       case "progress":
         return <Progress />;
       case "interest":
-        return <Intrest />;
+        return <Interest />;
       default:
-        return <Personal />;
+        return <Personal onDataUpdate={updateFormData} />;
     }
   };
 
@@ -40,12 +74,12 @@ export const ProfileForm = () => {
           <div className='profilePhoto'>
           </div>
           <div className='basicInfo'>
-              <h4>Manav Bhaveshbhai Vaishnani</h4>
-              <h4>D22CS091</h4>
+              <h1>{localStorage.getItem('firstName')} {localStorage.getItem('lastName')}</h1>
+              <h1>{localStorage.getItem('student_id')}</h1>
               <h4>15/12/2003</h4>
           </div>
-          <button id='edit' type="submit">Edit</button>
-          <button id='save' type="submit">Save</button>
+          {/* <button id='edit' type="submit">Edit</button>
+          <button id='save' type="submit" onClick={handleSave}>Save</button> */}
       </div>
       <br />
       <div className="buttonGroup">
@@ -60,16 +94,6 @@ export const ProfileForm = () => {
         ))}
       </div>
       {renderComponent()}
-      {/* <div className="save">
-        <button className="savepage">
-          Save
-        </button>
-      </div>
-      <div className="next">
-        <button className="nextpage" onClick={handleNext}>
-          Next
-        </button>
-      </div> */}
     </div>
   );
 };

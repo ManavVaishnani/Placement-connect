@@ -1,11 +1,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
 
     @import url('https://fonts.cdnfonts.com/css/baloo-tammudu-2');
-    
-    *{
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
     .circle {
         background-color: #802bb1;
         border-radius: 475px;
@@ -17,7 +12,7 @@
     }
     .ellipse {
         background-color: #ffffff;
-        border-radius: 207px/206px;
+        border-radius: 207px;
         height: 412px;
         left: 225px;
         position: relative;
@@ -131,7 +126,7 @@
         }
     }
 
-    /* .body{
+    .body{
         overflow-x: hidden;
         overflow-y: hidden;
-    } */
+    }

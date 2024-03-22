@@ -27,8 +27,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top: 150px;
-    margin-left: 600px;
+    /* margin-top: 150px;
+    margin-left: 600px; */
     cursor: pointer;
 }
 
@@ -37,10 +37,10 @@
     color: black;
 }
 
-.save{
-    margin-left: 600px;
-    margin-top: 200px;
-    margin-right: 10px;
+.contactsave{
+    margin-left: 800px;
+    /* margin-top: 200px; */
+    margin-bottom: 20px;
 }
 
 .save:hover{

@@ -27,8 +27,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top: 150px;
-    margin-left: 400px;
+    /* margin-top: 150px;
+    margin-left: 400px; */
     cursor: pointer;
 }
 
@@ -52,10 +52,10 @@
     margin-left: 30px;
 }
 
-.save{
-    margin-left: 600px;
-    margin-top: 200px;
-    margin-right: 10px;
+.education .save{
+    margin-left: 900px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .save:hover{

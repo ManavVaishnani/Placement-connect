@@ -6,6 +6,7 @@ import { Contact } from "./components/contact";
 import { Education } from "./components/education";
 import { Interest } from "./components/intrest"; 
 
+
 const views = ["personal", "contact", "education", "progress", "interest"];
 
 export const ProfileForm = () => {
@@ -69,31 +70,47 @@ export const ProfileForm = () => {
   };
 
   return (
-    <div>
-      <div className="profile-form">
-          <div className='profilePhoto'>
-          </div>
-          <div className='basicInfo'>
-              <h1>{localStorage.getItem('firstName')} {localStorage.getItem('lastName')}</h1>
-              <h1>{localStorage.getItem('student_id')}</h1>
-              <h4>15/12/2003</h4>
-          </div>
-          {/* <button id='edit' type="submit">Edit</button>
-          <button id='save' type="submit" onClick={handleSave}>Save</button> */}
+    <div id="main">
+      <div className="sidebar">
+        {/* Add sidebar content here */}
       </div>
-      <br />
-      <div className="buttonGroup">
-        {views.map((view, index) => (
-          <button
-            key={index}
-            id={view}
-            onClick={() => handleButtonClick(index)}
-          >
-            {view.charAt(0).toUpperCase() + view.slice(1)}
-          </button>
-        ))}
+      <div className="main-content">
+        <nav className="navbar">
+          <div className='Menu'>
+              {/* <MenuIcon style={{ fontSize: '3.5vh' }}/> */}
+          </div>
+          <div className='Title'>
+              PlacementConnect
+          </div>
+          <div className={`menu-button`} >
+          </div>
+          <ul className={`menu`}></ul>
+        </nav>
+        <div className="profile-form">
+            <div className='profilePhoto'>
+            </div>
+            <div className='basicInfo'>
+                <h1>{localStorage.getItem('firstName')} {localStorage.getItem('lastName')}</h1>
+                <h1>{localStorage.getItem('student_id')}</h1>
+                <h4>15/12/2003</h4>
+            </div>
+            {/* <button id='edit' type="submit">Edit</button>
+            <button id='save' type="submit" onClick={handleSave}>Save</button> */}
+        </div>
+        <br />
+        <div className="buttonGroup">
+          {views.map((view, index) => (
+            <button
+              key={index}
+              id={view}
+              onClick={() => handleButtonClick(index)}
+            >
+              {view.charAt(0).toUpperCase() + view.slice(1)}
+            </button>
+          ))}
+        </div>
+        {renderComponent()}
       </div>
-      {renderComponent()}
     </div>
   );
 };

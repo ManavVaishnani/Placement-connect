@@ -50,7 +50,7 @@ export const Progress = () => {
                 </div>
                 <div className="next">
                     <button className="addProject" onClick={handleAddProject}>Add Project</button><br />
-                    <button className="save">save</button>
+                    <button className="progresssave">save</button>
                 </div>
             </div>
 

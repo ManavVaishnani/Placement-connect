@@ -171,11 +171,8 @@ export const Education = () => {
                 
                 <div className="next">
                     <button className="save" onClick={handleSave}>save</button>
-                </div>
-                
-      </div>
-
-
+                </div>  
+        </div>
     </div>
   );
 }

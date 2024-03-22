@@ -120,7 +120,7 @@ export const Contact = () =>{
                 onChange={handleChange}
                 required/> <br />
                 <div className="next">
-                    <button className="save" onClick={handleSave}>save</button>
+                    <button className="contactsave" onClick={handleSave}>save</button>
                 </div>
             </div>
         </div>

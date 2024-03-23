@@ -151,7 +151,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-left: 10px;
+  margin-left: 500px;
 }
 
 #save:hover{
@@ -160,7 +160,7 @@
 }
 .buttonGroup{
   margin-left: 90px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 .buttonGroup button{
   margin-left: 10px;

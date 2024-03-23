@@ -97,7 +97,7 @@ export const ProfileForm = () => {
             {/* <button id='edit' type="submit">Edit</button>
             <button id='save' type="submit" onClick={handleSave}>Save</button> */}
         </div>
-        <br />
+        {/* <br /> */}
         <div className="buttonGroup">
           {views.map((view, index) => (
             <button

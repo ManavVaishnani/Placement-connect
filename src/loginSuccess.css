@@ -1,0 +1,701 @@
+@import url('https://fonts.cdnfonts.com/css/baloo-tammudu-2');
+
+.element-login-successfull .overlap-wrapper {
+    background-color: #ffffff;
+    height: 827px;
+    overflow: hidden;
+    width: 1532px;
+}
+
+.element-login-successfull .overlap {
+    height: 950px;
+    left: -365px;
+    position: relative;
+    top: -62px;
+    width: 1897px;
+}
+
+.element-login-successfull .circle {
+    background-color: #802bb1;
+    border-radius: 475px;
+    height: 950px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 950px;
+}
+
+.element-login-successfull .ellipse {
+    background-color: #ffffff;
+    border-radius: 207px/206px;
+    height: 412px;
+    left: 268px;
+    position: relative;
+    top: 269px;
+    width: 414px;
+}
+
+.element-login-successfull .text-wrapper {
+    color: #2d2823;
+    font-family: "Balsamiq Sans-Bold", Helvetica;
+    font-size: 96px;
+    font-weight: 700;
+    left: 1246px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 182px;
+    white-space: nowrap;
+    width: 320px;
+}
+
+.element-login-successfull .userid {
+    height: 67px;
+    left: 1108px;
+    position: absolute;
+    top: 367px;
+    width: 597px;
+}
+
+.element-login-successfull .overlap-group {
+    border: 2px solid;
+    border-color: #802bb1;
+    filter: blur(4px);
+    height: 67px;
+    position: relative;
+    width: 595px;
+}
+
+.element-login-successfull .div {
+    color: #000000;
+    font-family: "Baloo Tammudu 2-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    white-space: nowrap;
+    width: 107px;
+}
+
+.element-login-successfull .password {
+    height: 67px;
+    left: 1108px;
+    position: absolute;
+    top: 475px;
+    width: 597px;
+}
+
+.element-login-successfull .text-wrapper-2 {
+    color: #000000;
+    font-family: "Baloo Tammudu 2-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    white-space: nowrap;
+    width: 166px;
+}
+
+.element-login-successfull .login {
+    height: 67px;
+    left: 1108px;
+    position: absolute;
+    top: 624px;
+    width: 597px;
+}
+
+.element-login-successfull .div-wrapper {
+    background-color: #802bb1;
+    border-radius: 8px;
+    height: 67px;
+    position: relative;
+    width: 595px;
+}
+
+.element-login-successfull .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Baloo Tammudu 2-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 248px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+    width: 99px;
+}
+
+.element-login-successfull .rectangle {
+    -webkit-backdrop-filter: blur(4px) brightness(100%);
+    backdrop-filter: blur(4px) brightness(100%);
+    background-color: #802bb1cc;
+    height: 827px;
+    left: 365px;
+    position: absolute;
+    top: 62px;
+    width: 1532px;
+}
+
+.element-login-successfull .login-successful {
+    height: 582px;
+    left: 806px;
+    position: absolute;
+    top: 184px;
+    width: 652px;
+}
+
+.element-login-successfull .overlap-2 {
+    background-color: #ffffff;
+    border-radius: 18px;
+    height: 582px;
+    position: relative;
+    width: 650px;
+}
+
+.element-login-successfull .element-LOGIN {
+    color: #000000;
+    font-family: "Baloo Tammudu 2-SemiBold", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    left: 142px;
+    letter-spacing: 0;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    top: 342px;
+    width: 365px;
+}
+
+.element-login-successfull .overlap-group-wrapper {
+    height: 67px;
+    left: 106px;
+    position: absolute;
+    top: 482px;
+    width: 439px;
+}
+
+/* .element-login-successfull .overlap-group-2 {
+    background-color: #802bb1;
+    border-radius: 8px;
+    height: 67px;
+    position: relative;
+    width: 437px;
+} */
+
+.element-login-successfull .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Baloo Tammudu 2-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 152px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 7px;
+    white-space: nowrap;
+    width: 133px;
+}
+
+.element-login-successfull .group {
+    height: 248px;
+    left: 200px;
+    position: absolute;
+    top: 43px;
+    width: 250px;
+}
+
+.element-login-successfull .overlap-3 {
+    height: 248px;
+    position: relative;
+}
+
+.element-login-successfull .group-2 {
+    height: 248px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 250px;
+}
+
+.element-login-successfull .ellipse-2 {
+    background-color: #802bb1;
+    border-radius: 8.26px;
+    height: 17px;
+    left: 233px;
+    position: absolute;
+    top: 39px;
+    width: 17px;
+}
+
+.element-login-successfull .ellipse-3 {
+    background-color: #802bb1;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 147px;
+    position: absolute;
+    top: 8px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-4 {
+    background-color: #802bb1;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 2px;
+    position: absolute;
+    top: 81px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-5 {
+    background-color: #802bb1;
+    border-radius: 6.2px;
+    height: 12px;
+    left: 19px;
+    position: absolute;
+    top: 0;
+    width: 12px;
+}
+
+.element-login-successfull .ellipse-6 {
+    background-color: #ffffff;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 236px;
+    position: absolute;
+    top: 167px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-7 {
+    background-color: #802bb1;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 219px;
+    position: absolute;
+    top: 217px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-8 {
+    background-color: #802bb1;
+    border-radius: 3.1px;
+    height: 6px;
+    left: 48px;
+    position: absolute;
+    top: 242px;
+    width: 6px;
+}
+
+.element-login-successfull .ellipse-9 {
+    background-color: rgb(162, 58, 221);
+    border-radius: 5.17px;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 188px;
+    width: 10px;
+}
+
+.element-login-successfull .ellipse-10 {
+    background-color: rgb(162, 58, 221) ;
+    border-radius: 103.31px;
+    height: 207px;
+    left: 22px;
+    position: absolute;
+    top: 12px;
+    width: 207px;
+}
+
+.element-login-successfull .vector-wrapper {
+    background-color: #ffffff;
+    border-radius: 6px;
+    height: 66px;
+    left: 87px;
+    position: absolute;
+    top: 83px;
+    width: 76px;
+}
+
+.element-login-successfull .vector {
+    height: 34px;
+    left: 16px;
+    position: absolute;
+    top: 14px;
+    width: 44px;
+}
+.continue-btn{
+    height: 60px;
+    width: 437px;
+    font-size: 25px;
+    margin-top: 15px;
+    background-color: rgb(162, 58, 221);
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'baloo-tammudu-2';
+}
+body{
+    overflow: hidden;
+}
+@import url('https://fonts.cdnfonts.com/css/baloo-tammudu-2');
+
+.element-login-successfull .overlap-wrapper {
+    background-color: #ffffff;
+    height: 827px;
+    overflow: hidden;
+    width: 1532px;
+}
+
+.element-login-successfull .overlap {
+    height: 950px;
+    left: -365px;
+    position: relative;
+    top: -62px;
+    width: 1897px;
+}
+
+.element-login-successfull .circle {
+    background-color: #802bb1;
+    border-radius: 475px;
+    height: 950px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 950px;
+}
+
+.element-login-successfull .ellipse {
+    background-color: #ffffff;
+    border-radius: 207px/206px;
+    height: 412px;
+    left: 268px;
+    position: relative;
+    top: 269px;
+    width: 414px;
+}
+
+.element-login-successfull .text-wrapper {
+    color: #2d2823;
+    font-family: "Balsamiq Sans-Bold", Helvetica;
+    font-size: 96px;
+    font-weight: 700;
+    left: 1246px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 182px;
+    white-space: nowrap;
+    width: 320px;
+}
+
+.element-login-successfull .userid {
+    height: 67px;
+    left: 1108px;
+    position: absolute;
+    top: 367px;
+    width: 597px;
+}
+
+.element-login-successfull .overlap-group {
+    border: 2px solid;
+    border-color: #802bb1;
+    filter: blur(4px);
+    height: 67px;
+    position: relative;
+    width: 595px;
+}
+
+.element-login-successfull .div {
+    color: #000000;
+    font-family: "Baloo Tammudu 2-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    white-space: nowrap;
+    width: 107px;
+}
+
+.element-login-successfull .password {
+    height: 67px;
+    left: 1108px;
+    position: absolute;
+    top: 475px;
+    width: 597px;
+}
+
+.element-login-successfull .text-wrapper-2 {
+    color: #000000;
+    font-family: "Baloo Tammudu 2-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    white-space: nowrap;
+    width: 166px;
+}
+
+.element-login-successfull .login {
+    height: 67px;
+    left: 1108px;
+    position: absolute;
+    top: 624px;
+    width: 597px;
+}
+
+.element-login-successfull .div-wrapper {
+    background-color: #802bb1;
+    border-radius: 8px;
+    height: 67px;
+    position: relative;
+    width: 595px;
+}
+
+.element-login-successfull .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Baloo Tammudu 2-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 248px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+    width: 99px;
+}
+
+.element-login-successfull .rectangle {
+    -webkit-backdrop-filter: blur(4px) brightness(100%);
+    backdrop-filter: blur(4px) brightness(100%);
+    background-color: #802bb1cc;
+    height: 827px;
+    left: 365px;
+    position: absolute;
+    top: 62px;
+    width: 1532px;
+}
+
+.element-login-successfull .login-successful {
+    height: 582px;
+    left: 806px;
+    position: absolute;
+    top: 184px;
+    width: 652px;
+}
+
+.element-login-successfull .overlap-2 {
+    background-color: #ffffff;
+    border-radius: 18px;
+    height: 582px;
+    position: relative;
+    width: 650px;
+}
+
+.element-login-successfull .element-LOGIN {
+    color: #000000;
+    font-family: "Baloo Tammudu 2-SemiBold", Helvetica;
+    font-size: 40px;
+    font-weight: 600;
+    left: 142px;
+    letter-spacing: 0;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    top: 342px;
+    width: 365px;
+}
+
+.element-login-successfull .overlap-group-wrapper {
+    height: 67px;
+    left: 106px;
+    position: absolute;
+    top: 482px;
+    width: 439px;
+}
+
+/* .element-login-successfull .overlap-group-2 {
+    background-color: #802bb1;
+    border-radius: 8px;
+    height: 67px;
+    position: relative;
+    width: 437px;
+} */
+
+.element-login-successfull .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Baloo Tammudu 2-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    left: 152px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 7px;
+    white-space: nowrap;
+    width: 133px;
+}
+
+.element-login-successfull .group {
+    height: 248px;
+    left: 200px;
+    position: absolute;
+    top: 43px;
+    width: 250px;
+}
+
+.element-login-successfull .overlap-3 {
+    height: 248px;
+    position: relative;
+}
+
+.element-login-successfull .group-2 {
+    height: 248px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 250px;
+}
+
+.element-login-successfull .ellipse-2 {
+    background-color: #802bb1;
+    border-radius: 8.26px;
+    height: 17px;
+    left: 233px;
+    position: absolute;
+    top: 39px;
+    width: 17px;
+}
+
+.element-login-successfull .ellipse-3 {
+    background-color: #802bb1;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 147px;
+    position: absolute;
+    top: 8px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-4 {
+    background-color: #802bb1;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 2px;
+    position: absolute;
+    top: 81px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-5 {
+    background-color: #802bb1;
+    border-radius: 6.2px;
+    height: 12px;
+    left: 19px;
+    position: absolute;
+    top: 0;
+    width: 12px;
+}
+
+.element-login-successfull .ellipse-6 {
+    background-color: #ffffff;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 236px;
+    position: absolute;
+    top: 167px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-7 {
+    background-color: #802bb1;
+    border-radius: 2.07px;
+    height: 4px;
+    left: 219px;
+    position: absolute;
+    top: 217px;
+    width: 4px;
+}
+
+.element-login-successfull .ellipse-8 {
+    background-color: #802bb1;
+    border-radius: 3.1px;
+    height: 6px;
+    left: 48px;
+    position: absolute;
+    top: 242px;
+    width: 6px;
+}
+
+.element-login-successfull .ellipse-9 {
+    background-color: rgb(162, 58, 221);
+    border-radius: 5.17px;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 188px;
+    width: 10px;
+}
+
+.element-login-successfull .ellipse-10 {
+    background-color: rgb(162, 58, 221) ;
+    border-radius: 103.31px;
+    height: 207px;
+    left: 22px;
+    position: absolute;
+    top: 12px;
+    width: 207px;
+}
+
+.element-login-successfull .vector-wrapper {
+    background-color: #ffffff;
+    border-radius: 6px;
+    height: 66px;
+    left: 87px;
+    position: absolute;
+    top: 83px;
+    width: 76px;
+}
+
+.element-login-successfull .vector {
+    height: 34px;
+    left: 16px;
+    position: absolute;
+    top: 14px;
+    width: 44px;
+}
+.continue-btn{
+    height: 60px;
+    width: 437px;
+    font-size: 25px;
+    margin-top: 15px;
+    background-color: rgb(162, 58, 221);
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    font-family: 'baloo-tammudu-2';
+    cursor: pointer;
+}
+body{
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .element-login-successfull .overlap {
+        width: 100%;
+        left: 0;
+    }
+}

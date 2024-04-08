@@ -37,19 +37,6 @@ export const Login = (userId) => {
           localStorage.setItem('lastName', data['lastName']);
           navigate("/career");
         }
-        // if(data!=0){
-        //   localStorage.setItem('student_id', data['Collage_id']);
-        //   localStorage.setItem('firstName', data['firstName']);
-        //   localStorage.setItem('lastName', data['lastName']);
-        //   navigate("/career")
-        // }
-        // else{
-        //   // alert('Id or Password is incorrect');
-        //   // document.getElementById('userId').value="";
-        //   // document.getElementById('passWord').value="";
-        //   setIsPressed(false); // Reset button state
-        //   setError('Invalid email or password'); // New state variable for err
-        // }
         
       }).catch((error) => {
         console.error('Error:', error);

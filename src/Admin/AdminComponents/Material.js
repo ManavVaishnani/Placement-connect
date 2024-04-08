@@ -70,7 +70,7 @@ export const Material = ({ onDataUpdate }) => {
         </div>  
           <DocumentScannerOutlinedIcon className= "Document" />
            <button type="button" onClick={handleSave} className="Post-Button">
-          Post
+          Post_file
         </button>
           </div>
         

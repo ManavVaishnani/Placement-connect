@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Login from"./login";
 import ProfileForm from "./personalProfile";
+import Admin_ProfileForm from "./Admin/AddSection";
 import Remarks from "./Admin/remarksForStudents";
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route path='/career' element={<ProfileForm />} />
+        <Route path='/add' element={<Admin_ProfileForm/>}/>
         <Route path='/remarks' element={<Remarks/>}/>
       </Routes>
     </Router>

@@ -7,7 +7,7 @@ import { Placement } from "./AdminComponents/Placement";
 
 const views = ["placement", "announcement", "material"];
 
-export const ProfileForm = () => {
+export const Admin_ProfileForm = () => {
   const [currentViewIndex, setCurrentViewIndex] = useState(0);
   const [formData, setFormData] = useState({});
   const [activeButtonIndex, setActiveButtonIndex] = useState(0); // State to track active button index
@@ -81,4 +81,4 @@ export const ProfileForm = () => {
   );
 };
 
-export default ProfileForm;
+export default Admin_ProfileForm;

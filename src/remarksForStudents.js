@@ -1,7 +1,14 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
 import './remarksForStudents.css';
 
 export const Remarks = () => {
+    const [showProfilePopup, setShowProfilePopup] = useState(false);
+
+    const toggleProfilePopup = () => {
+        setShowProfilePopup(!showProfilePopup);
+    };
+
     return(
         <div className="remarks-container">
             <div className="remarks">
@@ -94,6 +101,14 @@ export const Remarks = () => {
                     <button className="addRemark"> + Add Remarks</button>
                 </div>
             </div>
+            {showProfilePopup && (
+                <div className="profile-popup">
+                    {/* Content of the profile popup */}
+                    <h2>Profile Popup</h2>
+                    {/* You can add whatever content you want in the popup */}
+                    <button onClick={toggleProfilePopup}>Close</button>
+                </div>
+            )}
         </div>
     );
 } 

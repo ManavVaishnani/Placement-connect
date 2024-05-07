@@ -13,6 +13,8 @@
     font-size: 15px;
     margin: 10px 0px 0px 10px;
 }
+/* progress.css */
+
 
 .progress label{
     font-size: 20px;
@@ -38,7 +40,7 @@
 
 .progresssave{
     margin-left: 600px;
-    margin-top: 200px;
+    margin-top: 270px;
     margin-right: 10px;
 }
 
@@ -50,6 +52,4 @@
     background-color: #ebebeb;
     color: black;
 }
-.body{
-    overflow: scroll;
-}
+

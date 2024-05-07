@@ -1,7 +1,7 @@
 import { Upload } from '@mui/icons-material';
 import React, { useState, useRef ,useEffect } from 'react';
-import { Navbar, Sidebar } from './bar';
-const Dashboard = () => {
+import { Navbar, Sidebar } from './Adminbar';
+const AdminDashboard = () => {
   const [initialJobPlacements,setInitialJobplacements] = useState([{}]);
   const [initialAnnouncements,setInitialAnnouncements] = useState([{}]);
   const [initialMaterial,setInitialMaterial] = useState([{}]);
@@ -341,4 +341,4 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
   );
 };
 
-export default Dashboard;
+export default AdminDashboard;

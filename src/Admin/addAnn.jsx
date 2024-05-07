@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import WorkIcon from '@mui/icons-material/Work';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import CampaignIcon from '@mui/icons-material/Campaign';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import { Subject } from "@mui/icons-material";
 const INPUT_CLASS =
@@ -31,6 +32,12 @@ const Sidebar = ({ isOpen }) => {
       <ul>
         {isOpen && (
           <>
+          <li className="mb-2">
+          <Link to="/admin_dashboard" className="text-purple-700 hover:text-purple-900 flex items-center">
+          <DashboardIcon className="mr-2" />
+            Dashboard
+          </Link>
+        </li>
             <li className="mb-2">
               <Link to="/addan" className="text-purple-700 hover:text-purple-900 flex items-center">
                 <CampaignIcon className="mr-2" />

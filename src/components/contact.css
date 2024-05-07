@@ -47,3 +47,18 @@
     background-color: #ebebeb;
     color: black;
 }
+/* Add this to your CSS file */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .flex.items-center {
+    justify-content: space-between;
+}

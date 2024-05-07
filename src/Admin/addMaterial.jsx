@@ -53,6 +53,12 @@ const Sidebar = ({ isOpen }) => {
         )}
         {isOpen && (
           <>
+          <li className="mb-2">
+          <Link to="/admin_dashboard" className="text-purple-700 hover:text-purple-900 flex items-center">
+          <DashboardIcon className="mr-2" />
+            Dashboard
+          </Link>
+        </li>
             <li className="mb-2">
               <Link to="/addan" className="text-purple-700 hover:text-purple-900 flex items-center">
                 <CampaignIcon className="mr-2" />
@@ -162,6 +168,7 @@ const Material = () => {
         <Sidebar isOpen={sidebarOpen} />
         <div className="max-w-4xl m-20 mx-auto p-6 bg-white shadow-lg rounded-lg">
           <div className="flex space-x-2 mb-6">
+            
             <Link to="/addplacement">
               <button
                 className={`${buttonClass} text-white-600 border-zinc-200 hover:bg-zinc-100`}

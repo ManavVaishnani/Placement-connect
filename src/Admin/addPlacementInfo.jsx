@@ -47,6 +47,12 @@ const Sidebar = ({ isOpen }) => {
         )}
         {isOpen && (
           <>
+          <li className="mb-2">
+          <Link to="/admin_dashboard" className="text-purple-700 hover:text-purple-900 flex items-center">
+          <DashboardIcon className="mr-2" />
+            Dashboard
+          </Link>
+        </li>
             <li className="mb-2">
               <Link to="/addan" className="text-purple-700 hover:text-purple-900 flex items-center">
                 <CampaignIcon className="mr-2" />

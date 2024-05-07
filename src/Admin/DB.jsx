@@ -1,39 +1,60 @@
 import { Upload } from '@mui/icons-material';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef ,useEffect } from 'react';
 
 const Dashboard = () => {
-  const initialJobPlacements = [
-    { 
-      title: 'Job Title 1',
-      date: 'May 1, 2024',
-      domain: 'https://example.com',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    { 
-      title: 'Job Title 2',
-      date: 'May 2, 2024',
-      domain: 'https://example.com',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    },
-    { 
-      title: 'Job Title 3',
-      date: 'May 3, 2024',
-      domain: 'https://example.com',
-      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-    },
-    { 
-      title: 'Job Title 4',
-      date: 'May 4, 2024',
-      domain: 'https://example.com',
-      description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    },
-    { 
-      title: 'Job Title 5',
-      date: 'May 5, 2024',
-      domain: 'https://example.com',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
-    },
-  ];
+  const [initialJobPlacements,setInitialJobplacements] = useState([{}]);
+  const fetch_placement_data = ()=>{
+      fetch('http://localhost:5000/api/get_placement_data', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }).then(response => response.json())
+          .then(data => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+        
+      // Effect to fetch personal data when the component mounts
+      
+  }
+  useEffect(() => {
+    fetch_placement_data();
+  }, []);
+  // const initialJobPlacements = [
+  //   { 
+  //     title: 'Job Title 1',
+  //     date: 'May 1, 2024',
+  //     domain: 'https://example.com',
+  //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  //   },
+  //   { 
+  //     title: 'Job Title 2',
+  //     date: 'May 2, 2024',
+  //     domain: 'https://example.com',
+  //     description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  //   },
+  //   { 
+  //     title: 'Job Title 3',
+  //     date: 'May 3, 2024',
+  //     domain: 'https://example.com',
+  //     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  //   },
+  //   { 
+  //     title: 'Job Title 4',
+  //     date: 'May 4, 2024',
+  //     domain: 'https://example.com',
+  //     description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  //   },
+  //   { 
+  //     title: 'Job Title 5',
+  //     date: 'May 5, 2024',
+  //     domain: 'https://example.com',
+  //     description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+  //   },
+  // ];
 const initialMaterial = [
     { 
       title: 'Material Title 1',

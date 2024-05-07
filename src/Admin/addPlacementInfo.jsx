@@ -81,21 +81,66 @@ const Sidebar = ({ isOpen }) => {
 const buttonClass = "px-4 py-2 text-sm font-semibold rounded-lg border focus:outline-none";
 const inputClass = "border rounded-lg px-4 py-2 w-full focus:outline-none focus:border-purple-300";
 
-const UploadSection = () => {
-    return (
-        <div className="border-2 border-dashed border-purple-200 rounded-lg p-4 mb-4 relative">
-            <div className="flex justify-center items-center">
-                <div className="flex flex-col items-center">
-                    <i className="fas fa-cloud-upload-alt text-purple-300 text-6xl"></i>
-                    <span className="block text-zinc-400 font-normal">Drag your file(s) to start uploading</span>
-                    <input type="file" className="mt-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg" multiple/>
-                </div>
-            </div>
-        </div>
-    );
-};
+// const UploadSection = () => {
+//     return (
+//         <div className="border-2 border-dashed border-purple-200 rounded-lg p-4 mb-4 relative">
+//             <div className="flex justify-center items-center">
+//                 <div className="flex flex-col items-center">
+//                     <i className="fas fa-cloud-upload-alt text-purple-300 text-6xl"></i>
+//                     <span className="block text-zinc-400 font-normal">Drag your file(s) to start uploading</span>
+//                     <input type="file" className="mt-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg" multiple/>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
 
 const FormComponent = () => {
+    const [title, setTitle] = useState('');
+    const [date, setDate] = useState('');
+    const [description, setDescription] = useState('');
+    const [registrationLink, setRegistrationLink] = useState('');
+    const [files, setFiles] = useState(null);
+    // console.log(title);
+    const handleFileChange = (e) => {
+      // Update file state with the selected file
+      setFiles(e.target.files[0]);
+    };
+    const handleSubmit = async (e) => {
+      console.log("bhavya");
+      e.preventDefault();
+      console.log("Title:", title);
+      console.log("Date:", date);
+      console.log("Description:", description);
+      console.log("Registration Link:", registrationLink);
+      console.log("File:", files);
+      let formData = new FormData();
+      formData.append('type', 'placement');
+      formData.append('title', title);
+      formData.append('date', date);
+      formData.append('description', description);
+      formData.append('registrationLink', registrationLink);
+      // files.forEach((file) => {
+          formData.append('file', files);
+      // });
+      console.log(formData);
+      try {
+        const response = await fetch('http://localhost:5000/upload', {
+            method: 'POST',
+            body: formData, // Use 'body' instead of 'data'
+        });
+
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+
+          const data = await response.json();
+          console.log(data); // handle success
+          alert(data['message']);
+      } catch (error) {
+          console.error('Error:', error); // handle error
+      }
+    }
     return (
         <div className="max-w-4xl m-20 mx-auto p-6 bg-white shadow-lg rounded-lg">
             <div className="flex space-x-4 mb-4">
@@ -110,14 +155,22 @@ const FormComponent = () => {
                 </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input type="text" placeholder="Title" className={inputClass}/>
-                <input type="text" placeholder="Date" className={inputClass}/>
+                <input type="text" onChange={(e) => setTitle(e.target.value)} placeholder="Title" className={inputClass}/>
+                <input type="text"onChange={(e) => setDate(e.target.value)} placeholder="Date" className={inputClass}/>
             </div>
-            <input type="text" placeholder="Description" className={inputClass + " mb-4"}/>
-            <input type="text" placeholder="Registration link" className={inputClass + " mb-4"}/>
-            <UploadSection />
+            <input type="text" onChange={(e) => setDescription(e.target.value)} placeholder="Description" className={inputClass + " mb-4"}/>
+            <input type="text" onChange={(e) => setRegistrationLink(e.target.value)} placeholder="Registration link" className={inputClass + " mb-4"}/>
+            <div className="border-2 border-dashed border-purple-200 rounded-lg p-4 mb-4 relative">
+                <div className="flex justify-center items-center">
+                  <div className="flex flex-col items-center">
+                    <i className="fas fa-cloud-upload-alt text-purple-300 text-6xl"></i>
+                    <span className="block text-zinc-400 font-normal">Drag your file(s) to start uploading</span>
+                    <input type="file" onChange={handleFileChange} className="mt-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg"/>
+                  </div>
+                </div>
+            </div>
             <div className="flex justify-end">
-                <button className="px-6 py-2 bg-purple-600 text-white rounded-lg">Post</button>
+                <button className="px-6 py-2 bg-purple-600 text-white rounded-lg" onClick={handleSubmit}>Post</button>
             </div>
         </div>
     );

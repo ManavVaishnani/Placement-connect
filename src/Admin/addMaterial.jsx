@@ -111,6 +111,50 @@ const Material = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const [title, setTitle] = useState('');
+    const [subject, setSubject] = useState('');
+    const [description, setDescription] = useState('');
+    const [files, setFiles] = useState(null);
+    // console.log(title);
+    const handleFileChange = (e) => {
+      // Update file state with the selected file
+      setFiles(e.target.files[0]);
+    };
+    const handleSubmit = async (e) => {
+      console.log("bhavya");
+      e.preventDefault();
+      console.log("Title:", title);
+      console.log("subject:", subject);
+      console.log("Description:", description);
+      console.log("File:", files);
+      let formData = new FormData();
+      formData.append('type', 'material');
+      formData.append('title', title);
+      formData.append('subject', subject);
+      formData.append('description', description);
+      // files.forEach((file) => {
+          formData.append('file', files);
+      // });
+      console.log(formData);
+      try {
+        const response = await fetch('http://localhost:5000/upload', {
+            method: 'POST',
+            body: formData, // Use 'body' instead of 'data'
+        });
+
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+
+          const data = await response.json();
+          console.log(data); // handle success
+          alert(data['message']);
+      } catch (error) {
+          console.error('Error:', error); // handle error
+      }
+    }
+
+
   return (
     <div>
       <Navbar toggleSidebar={toggleSidebar} />
@@ -141,19 +185,35 @@ const Material = () => {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <input type="text" placeholder="Title" className={inputClass} />
+            <input type="text" onChange={(e) => setTitle(e.target.value)} placeholder="Title" className={inputClass} />
             <input
               type="text"
+              onChange={(e) => setSubject(e.target.value)}
               placeholder="Subject or domain"
               className={inputClass}
             />
           </div>
-          <textarea placeholder="Description" className={textareaClass}></textarea>
-          <button className="mt-6 bg-purple-600 text-white px-6 py-2 rounded-lg float-right focus:outline-none">
+          <textarea onChange={(e) => setDescription(e.target.value)} placeholder="Description" className={textareaClass}></textarea>
+          <button onClick={handleSubmit} className="mt-6 bg-purple-600 text-white px-6 py-2 rounded-lg float-right focus:outline-none">
             Post
           </button>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <UploadSection />
+          <div className="border-2 border-dashed border-purple-200 rounded-lg p-4 mb-4 relative">
+            <div className="flex justify-center items-center">
+              <div className="flex flex-col items-center">
+                <i className="fas fa-cloud-upload-alt text-purple-300 text-6xl"></i>
+                <span className="block text-zinc-400 font-normal">
+                  Drag your file(s) to start uploading
+                </span>
+                <input
+                  type="file"
+                  onChange={handleFileChange} 
+                  className="mt-2 px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg"
+                  multiple
+                />
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Remarks from "./Admin/remarksForStudents";
 import FormComponent from "./Admin/addPlacementInfo";
 import MyForm from "./Admin/addAnn";
 import Material from "./Admin/addMaterial";
+import Dashboard from "./Admin/DB";
 function App() {
   return (
     <Router>
@@ -18,7 +19,7 @@ function App() {
         <Route path='/addplacement' element={<FormComponent/>}/>
         <Route path='/addAn' element={<MyForm/>}/>
         <Route path='/addMa' element={<Material/>}/>
-
+        <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
     </Router>
   );

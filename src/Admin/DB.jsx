@@ -3,16 +3,30 @@ import React, { useState, useRef ,useEffect } from 'react';
 
 const Dashboard = () => {
   const [initialJobPlacements,setInitialJobplacements] = useState([{}]);
-  const fetch_placement_data = ()=>{
-      fetch('http://localhost:5000/api/get_placement_data', {
+  const [initialAnnouncements,setInitialAnnouncements] = useState([{}]);
+  const [initialMaterial,setInitialMaterial] = useState([{}]);
+  function fetch_placement_data(){
+     fetch('http://localhost:5000/api/get_placement_data', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
             },
           }).then(response => response.json())
           .then(data => {
-            console.log(data);
-          })
+            console.log("data : " ,data);
+ 
+          // Map over the fetched data to format it as needed
+          const formattedData = data.map(item => ({
+              title: item.Title,
+              date: item.Date,
+              domain: item.Regestretion_link,
+              description: item.Description,
+              file: item.file_name.file_name,
+          }));
+                    setInitialJobplacements(formattedData);
+          console.log("bhavya : ",initialJobPlacements);
+        }
+        )
           .catch((error) => {
             console.error('Error:', error);
           });
@@ -20,8 +34,62 @@ const Dashboard = () => {
       // Effect to fetch personal data when the component mounts
       
   }
+  function fetch_announcement_data(){
+    fetch('http://localhost:5000/api/get_announcement_data', {
+           method: 'GET',
+           headers: {
+             'Content-Type': 'application/json',
+           },
+         }).then(response => response.json())
+         .then(data => {
+           console.log("announcement data : " ,data);
+
+         // Map over the fetched data to format it as needed
+         const formattedData = data.map(item => ({
+             title: item.Title,
+             subject: item.Subject,
+             description: item.Description,
+             file: item.file_name.file_name,
+         }));
+        setInitialAnnouncements(formattedData);
+         console.log("announcement : ",initialAnnouncements);
+       }
+       )
+         .catch((error) => {
+           console.error('Error:', error);
+         });
+       
+ }
+ function fetch_material_data(){
+  fetch('http://localhost:5000/api/get_material_data', {
+         method: 'GET',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+       }).then(response => response.json())
+       .then(data => {
+         console.log("material data : " ,data);
+
+       // Map over the fetched data to format it as needed
+       const formattedData = data.map(item => ({
+           title: item.Title,
+           subject: item.Subject,
+           description: item.Description,
+           file: item.file_name.file_name,
+       }));
+      setInitialMaterial(formattedData);
+       console.log("material : ",initialAnnouncements);
+     }
+     )
+       .catch((error) => {
+         console.error('Error:', error);
+       });
+     
+}
   useEffect(() => {
     fetch_placement_data();
+    fetch_announcement_data();
+    fetch_material_data();
   }, []);
   // const initialJobPlacements = [
   //   { 
@@ -55,66 +123,66 @@ const Dashboard = () => {
   //     description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
   //   },
   // ];
-const initialMaterial = [
-    { 
-      title: 'Material Title 1',
-      subject: 'xyz',
-      Uploaded : 'xyz sir',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    { 
-      title: 'Material Title 1',
-      subject: 'xyz',
-      Uploaded : 'xyz sir',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    { 
-      title: 'Material Title 1',
-      subject: 'xyz',
-      Uploaded : 'xyz sir',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    { 
-      title: 'Material Title 1',
-      subject: 'xyz',
-      Uploaded : 'xyz sir',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    { 
-      title: 'Material Title 1',
-      subject: 'xyz',
-      Uploaded : 'xyz sir',
-      Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-  ];
+// const initialMaterial = [
+//     { 
+//       title: 'Material Title 1',
+//       subject: 'xyz',
+//       Uploaded : 'xyz sir',
+//       Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+//     },
+//     { 
+//       title: 'Material Title 1',
+//       subject: 'xyz',
+//       Uploaded : 'xyz sir',
+//       Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+//     },
+//     { 
+//       title: 'Material Title 1',
+//       subject: 'xyz',
+//       Uploaded : 'xyz sir',
+//       Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+//     },
+//     { 
+//       title: 'Material Title 1',
+//       subject: 'xyz',
+//       Uploaded : 'xyz sir',
+//       Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+//     },
+//     { 
+//       title: 'Material Title 1',
+//       subject: 'xyz',
+//       Uploaded : 'xyz sir',
+//       Description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+//     },
+//   ];
 
-  const initialAnnouncements = [
-    {
-      title: 'Announcement Title 1',
-      date: 'May 1, 2024',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      title: 'Announcement Title 2',
-      date: 'May 2, 2024',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    },
-    {
-      title: 'Announcement Title 3',
-      date: 'May 3, 2024',
-      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-    },
-    {
-      title: 'Announcement Title 4',
-      date: 'May 4, 2024',
-      description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    },
-    {
-      title: 'Announcement Title 5',
-      date: 'May 5, 2024',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
-    },
-  ];
+  // const initialAnnouncements = [
+  //   {
+  //     title: 'Announcement Title 1',
+  //     date: 'May 1, 2024',
+  //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  //   },
+  //   {
+  //     title: 'Announcement Title 2',
+  //     date: 'May 2, 2024',
+  //     description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  //   },
+  //   {
+  //     title: 'Announcement Title 3',
+  //     date: 'May 3, 2024',
+  //     description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  //   },
+  //   {
+  //     title: 'Announcement Title 4',
+  //     date: 'May 4, 2024',
+  //     description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  //   },
+  //   {
+  //     title: 'Announcement Title 5',
+  //     date: 'May 5, 2024',
+  //     description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
+  //   },
+  // ];
     
   const [showAllJobs, setShowAllJobs] = useState(false);
   const [showAllAnnouncements, setShowAllAnnouncements] = useState(false);
@@ -184,7 +252,9 @@ const handleMaterialDetailsClick = (material) => {
     <p className="text-gray-600 mb-2">Date: {job.date}</p>
     <div className="flex items-center">
       <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4" onClick={() => handleDetailsClick(job)}>Details</button>
-      <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button>
+      <a href={'http://localhost:5000/uploads/' + job.file} target="_blank" rel="noopener noreferrer"> 
+  <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button>
+</a>
     </div>
   </div>
 ))}
@@ -203,7 +273,8 @@ const handleMaterialDetailsClick = (material) => {
                 <p className="text-gray-600 mb-2">Description: {job.description}</p>
                 <div className="flex items-center">
                   <button className="bg-black-500 text-white px-4 py-2 rounded mr-4" onClick={() => handleDetailsClick(job)}>Details</button>
-                  <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button>
+                  <a href={'http://localhost:5000/uploads/' + job.file} target="_blank" rel="noopener noreferrer"> 
+                  <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button></a>
                 </div>
               </div>
             ))}
@@ -219,7 +290,8 @@ const handleMaterialDetailsClick = (material) => {
               <p className="text-gray-600 mb-2">Domain: <a href={selectedJob.domain} target="_blank" rel="noopener noreferrer">{selectedJob.domain}</a></p>
               <p className="text-gray-600 mb-2">Description: {selectedJob.description}</p>
               <div className="flex items-center">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">Download PDF</button>
+              <a href={'http://localhost:5000/uploads/' + selectedJob.file} target="_blank" rel="noopener noreferrer"> 
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">Download PDF</button></a>
               </div>
             </div>
           </div>
@@ -240,10 +312,11 @@ const handleMaterialDetailsClick = (material) => {
             {initialAnnouncements.slice(0, 3).map((Announcement, index) => (
   <div key={index} className="border-b border-gray-200 pb-4 mb-4 md:w-1/2 md:pr-4">
     <h3 className="text-lg font-semibold mb-2">{Announcement.title}</h3>
-    <p className="text-gray-600 mb-2">Date: {Announcement.date}</p>
+    <p className="text-gray-600 mb-2">Subject: {Announcement.subject}</p>
     <div className="flex items-center">
       <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4" onClick={() => handleAnnouncementDetailsClick(Announcement)}>Details</button>
-      <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button>
+      <a href={'http://localhost:5000/uploads/' + Announcement.file} target="_blank" rel="noopener noreferrer"> 
+      <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button></a>
     </div>
   </div>
 ))}
@@ -256,11 +329,12 @@ const handleMaterialDetailsClick = (material) => {
             {initialAnnouncements.map((announcement, index) => (
               <div key={index} className="border-b border-gray-200 pb-4 mb-4">
                 <h3 className="text-lg font-semibold mb-2">{announcement.title}</h3>
-                <p className="text-gray-600 mb-2">Date: {announcement.date}</p>
+                <p className="text-gray-600 mb-2">Subject: {announcement.subject}</p>
                 <p className="text-gray-600 mb-2">Description: {announcement.description}</p>
                 <div className="flex items-center">
                   <button className="bg-black-500 text-white px-4 py-2 rounded mr-4" onClick={() => handleAnnouncementDetailsClick(announcement)}>Details</button>
-                  <button className="bg-purple-700 text-white px-4 py-2 rounded">Download PDF</button>
+                  <a href={'http://localhost:5000/uploads/' + announcement.file} target="_blank" rel="noopener noreferrer"> 
+                  <button className="bg-purple-700 text-white px-4 py-2 rounded">Download PDF</button></a>
                 </div>
               </div>
             ))}
@@ -272,8 +346,10 @@ const handleMaterialDetailsClick = (material) => {
           <div ref={popupRef} className="bg-white p-4 shadow-md rounded-lg overflow-auto" style={{ maxHeight: '80vh', width: '70%', maxWidth: '650px' }}>
             <div className="border-b border-gray-200 pb-4 mb-4">
               <h3 className="text-lg font-semibold mb-2">{selectedAnnouncement.title}</h3>
-              <p className="text-gray-600 mb-2">Date: {selectedAnnouncement.date}</p>
+              <p className="text-gray-600 mb-2">subject: {selectedAnnouncement.subject}</p>
               <p className="text-gray-600 mb-2">Description: {selectedAnnouncement.description}</p>
+              <a href={'http://localhost:5000/uploads/' + selectedAnnouncement.file} target="_blank" rel="noopener noreferrer"> 
+                  <button className="bg-purple-700 text-white px-4 py-2 rounded">Download PDF</button></a>
             </div>
           </div>
         </div>
@@ -294,10 +370,11 @@ const handleMaterialDetailsClick = (material) => {
   <div key={index} className="border-b border-gray-200 pb-4 mb-4 md:w-1/2 md:pr-4">
     <h3 className="text-lg font-semibold mb-2">{material.title}</h3>
     <p className="text-gray-600 mb-2">Subject: {material.subject}</p>
-    <p className="text-gray-600 mb-2">Upload By: {material.Uploaded}</p>
+    <p className="text-gray-600 mb-2">Description: {material.description}</p>
     <div className="flex items-center">
       <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4" onClick={() => handleMaterialDetailsClick(material)}>Details</button>
-      <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button>
+      <a href={'http://localhost:5000/uploads/' + material.file} target="_blank" rel="noopener noreferrer"> 
+      <button className="bg-black-500 text-white px-4 py-2 rounded">Download PDF</button></a>
     </div>
   </div>
 ))}
@@ -310,11 +387,12 @@ const handleMaterialDetailsClick = (material) => {
       <div className="border-b border-gray-200 pb-4 mb-4">
         <h3 className="text-lg font-semibold mb-2">{selectedMaterial.title}</h3>
         <p className="text-gray-600 mb-2">Subject: {selectedMaterial.subject}</p>
-        <p className="text-gray-600 mb-2">Uploaded By: {selectedMaterial.Uploaded}</p>
+        {/* <p className="text-gray-600 mb-2">Uploaded By: {selectedMaterial.Uploaded}</p> */}
         <p className="text-gray-600 mb-2">Description: {selectedMaterial.Description}</p>
         {/* Add more details as needed */}
         <div className="flex items-center">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">Download PDF</button>
+        <a href={'http://localhost:5000/uploads/' + selectedMaterial.file} target="_blank" rel="noopener noreferrer"> 
+          <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">Download PDF</button></a>
         </div>
       </div>
     </div>
@@ -327,10 +405,11 @@ const handleMaterialDetailsClick = (material) => {
               <div key={index} className="border-b border-gray-200 pb-4 mb-4">
                 <h3 className="text-lg font-semibold mb-2">{material.title}</h3>
                 <p className="text-gray-600 mb-2">subject: {material.subject}</p>
-                <p className="text-gray-600 mb-2">Upload by: {material.Uploaded}</p>
+                {/* <p className="text-gray-600 mb-2">Upload by: {material.Uploaded}</p> */}
                 <p className="text-gray-600 mb-2">Description: {material.Description}</p>
                 <div className="flex items-center">
-                  <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">Download PDF</button>
+                <a href={'http://localhost:5000/uploads/' + material.file} target="_blank" rel="noopener noreferrer"> 
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">Download PDF</button></a>
                 </div>
               </div>
             ))}

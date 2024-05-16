@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 const Navbar = ({ toggleSidebar }) => {
   return (
-    <nav className="bg-purple-700 p-4">
+    <nav className="bg-purple-700 w-screen p-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <MenuIcon className="text-white mr-2 cursor-pointer" onClick={toggleSidebar} />
@@ -21,11 +23,13 @@ const Sidebar = ({ isOpen }) => {
       <ul>
         <li className="mb-2">
           <Link to="/dashboard" className="text-purple-700 hover:text-purple-900 flex items-center">
+          <DashboardIcon className="mr-2" />
             Dashboard
           </Link>
         </li>
         <li className="mb-2">
           <Link to="/career" className="text-purple-700 hover:text-purple-900 flex items-center">
+          <PersonOutlineIcon className="mr-2" />
             Profile
           </Link>
         </li>

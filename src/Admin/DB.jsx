@@ -1,6 +1,7 @@
 import { Upload } from '@mui/icons-material';
 import React, { useState, useRef ,useEffect } from 'react';
 import { Navbar, Sidebar } from './bar';
+
 const Dashboard = () => {
   const [initialJobPlacements,setInitialJobplacements] = useState([{}]);
   const [initialAnnouncements,setInitialAnnouncements] = useState([{}]);
@@ -127,16 +128,22 @@ const handleMaterialMoreClick = () => {
   const handleDetailsClick = (job) => {
     setSelectedJob(job);
     setShowDetailsPopup(true);
+    setSelectedAnnouncement(false);
+    setSelectedMaterial(false);
   };
 
   const handleAnnouncementDetailsClick = (announcement) => {
-    setSelectedAnnouncement(announcement);
+    setSelectedJob(false);
     setShowDetailsPopup(true);
+    setSelectedAnnouncement(announcement);
+    setSelectedMaterial(false);
   };
 
 const handleMaterialDetailsClick = (material) => {
-  setSelectedMaterial(material);
-  setShowDetailsPopup(true); 
+  setSelectedJob(false);
+    setShowDetailsPopup(true);
+    setSelectedAnnouncement(false);
+    setSelectedMaterial(material); 
 };
 
 const [sidebarOpen, setSidebarOpen] = useState(false);

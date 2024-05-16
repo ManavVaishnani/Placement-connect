@@ -127,16 +127,22 @@ const handleMaterialMoreClick = () => {
   const handleDetailsClick = (job) => {
     setSelectedJob(job);
     setShowDetailsPopup(true);
+    setSelectedAnnouncement(false);
+    setSelectedMaterial(false);
   };
 
   const handleAnnouncementDetailsClick = (announcement) => {
-    setSelectedAnnouncement(announcement);
+    setSelectedJob(false);
     setShowDetailsPopup(true);
+    setSelectedAnnouncement(announcement);
+    setSelectedMaterial(false);
   };
 
 const handleMaterialDetailsClick = (material) => {
-  setSelectedMaterial(material);
-  setShowDetailsPopup(true); 
+  setSelectedJob(false);
+    setShowDetailsPopup(true);
+    setSelectedAnnouncement(false);
+    setSelectedMaterial(material); 
 };
 
 const [sidebarOpen, setSidebarOpen] = useState(false);

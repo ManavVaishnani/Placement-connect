@@ -1,11 +1,11 @@
   import React, { useEffect, useState } from "react";
   import { Link } from "react-router-dom";
   import MenuIcon from '@mui/icons-material/Menu';
-  import { Progress } from "./components/progress";
-  import { Personal } from "./components/personal";
-  import { Contact } from "./components/contact";
-  import { Education } from "./components/education";
-  import { Interest } from "./components/intrest"; 
+  import { Progress } from "./StudentComponents/progress";
+  import { Personal } from "./StudentComponents/personal";
+  import { Contact } from "./StudentComponents/contact";
+  import { Education } from "./StudentComponents/education";
+  import { Interest } from "./StudentComponents/intrest"; 
   import PersonIcon from '@mui/icons-material/Person';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import SchoolIcon from '@mui/icons-material/School';

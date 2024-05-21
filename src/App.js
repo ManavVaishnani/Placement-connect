@@ -1,12 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Login from"./login";
-import ProfileForm from "./personalProfile";
-import Admin_ProfileForm from "./Admin/AddSection";
+import ProfileForm from "./Student/personalProfile";
 import Remarks from "./Admin/remarksForStudents";
-import FormComponent from "./Admin/addPlacementInfo";
-import MyForm from "./Admin/addAnn";
-import Material from "./Admin/addMaterial";
+import FormComponent from "./Admin/AdminComponents/addPlacementInfo";
+import MyForm from "./Admin/AdminComponents/addAnn";
+import Material from "./Admin/AdminComponents/addMaterial";
 import Dashboard from "./Admin/DB";
 import AdminDashboard from "./Admin/AdminDB";
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route path='/career' element={<ProfileForm />} />
-        <Route path='/add' element={<Admin_ProfileForm/>}/>
         <Route path='/remarks' element={<Remarks/>}/>
         <Route path='/addplacement' element={<FormComponent/>}/>
         <Route path='/addAn' element={<MyForm/>}/>

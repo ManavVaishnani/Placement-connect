@@ -6,7 +6,7 @@ import Remarks from "./Admin/remarksForStudents";
 import FormComponent from "./Admin/AdminComponents/addPlacementInfo";
 import MyForm from "./Admin/AdminComponents/addAnn";
 import Material from "./Admin/AdminComponents/addMaterial";
-import Dashboard from "./Admin/DB";
+import Dashboard from "./Student/DB";
 import AdminDashboard from "./Admin/AdminDB";
 function App() {
   return (

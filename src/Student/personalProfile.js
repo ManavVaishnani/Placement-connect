@@ -1,22 +1,22 @@
-  import React, { useEffect, useState } from "react";
-  import { Link } from "react-router-dom";
-  import MenuIcon from '@mui/icons-material/Menu';
-  import { Progress } from "./StudentComponents/progress";
-  import { Personal } from "./StudentComponents/personal";
-  import { Contact } from "./StudentComponents/contact";
-  import { Education } from "./StudentComponents/education";
-  import { Interest } from "./StudentComponents/intrest"; 
-  import PersonIcon from '@mui/icons-material/Person';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
+import { Progress } from "./StudentComponents/progress";
+import { Personal } from "./StudentComponents/personal";
+import { Contact } from "./StudentComponents/contact";
+import { Education } from "./StudentComponents/education";
+import { Interest } from "./StudentComponents/intrest"; 
+import PersonIcon from '@mui/icons-material/Person';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import SchoolIcon from '@mui/icons-material/School';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-
+import "./personalProfile.css"
   const views = ["personal", "contact", "education", "progress"];
   const icons = [<PersonIcon />, <ContactMailIcon />, <SchoolIcon />, <TrendingUpIcon />];
 
   const Navbar = ({ toggleSidebar }) => {
     return (
-      <nav className="bg-purple-800 p-4 fixed top-0 left-0 w-full z-10">
+      <nav className="bg-purple-800 p-4 fixed top-0 left-0 w-full z-10 ">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4 text-white">
             <MenuIcon style={{ fontSize: '3.5vh' }} onClick={toggleSidebar} />
@@ -29,7 +29,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
   const Sidebar = ({ isOpen, handleButtonClick }) => {
     return (
-      <div className={`h-100 lg:w-1/5 bg-gray-200 ${isOpen ? '' : 'hidden'} mt-1 lg:mt-1.5`}> 
+      <div className={`h-screen lg:w-1/5 bg-gray-200 ${isOpen ? '' : 'hidden'} mt-1 lg:mt-1.5 overflow-hidden`}> 
         <ul>
           <Link to="/dashboard">
             <li className="cursor-pointer py-2 px-4 flex items-center">{<MenuIcon />} Dashboard</li>
@@ -115,7 +115,7 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
           <div className="p-4">
             <div className="flex">
               <div className="profilePhoto">
-                {/* Profile photo */}
+                
               </div>
               <div className="basicInfo ml-4">
                 <h1>{localStorage.getItem('firstName')} {localStorage.getItem('lastName')}</h1>

@@ -154,7 +154,7 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div>
     <Navbar toggleSidebar={toggleSidebar} />
-      <div className='flex w-70'>
+      <div className='flex w-70 overflow-x-hidden'>
        <Sidebar isOpen={sidebarOpen} />
         <div className="bg-gray-100 h-screen" onClick={handlePopupClose}>
       <header className="bg-blue-500 p-4 text-white text-xl font-bold flex justify-between items-center">

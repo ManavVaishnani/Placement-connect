@@ -8,7 +8,7 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 const Navbar = ({ toggleSidebar }) => {
   return (
-    <nav className="bg-purple-700 p-4">
+    <nav className="bg-purple-700 p-4 overflow-hidden" >
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <MenuIcon className="text-white mr-2 cursor-pointer" onClick={toggleSidebar} />

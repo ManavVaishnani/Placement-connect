@@ -5,8 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placement-connect</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
     
+<section id="header">
+    <div class="container">
+        <img src="images/logo.png" class="logo">
+        <div class="header-text">
+            <h1>The purpose is to <br> make it Easy for University and students.</h1>
+            <span class="square">
+            </span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, placeat, eius laborum dolore eligendi aspernatur cum labore quo, error non blanditiis doloremque consectetur unde? Expedita iusto cumque nostrum officia quibusdam!</p>
+            <button class="common-btn"> Login/Signin</button>
+            <div class="line">
+                <span class="line-1"></span><br>
+                <span class="line-2"></span><br>
+                <span class="line-3"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <nav id="sideNav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">FEATURE</a></li>
+            <li><a href="#">TECHNOLOGY</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <img src="images/menu.png" id="menuBtn">
+<!---javascript fro menubtn--->
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function() {
+            if(sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+            }
+            else{
+                sideNav.style.right = "-250px";
+            }
+        }
+    </script>
+
+
+<!---about us---->
+<section id="about">
+    <div class="about-left-col">
+        <img src="images/about.png">
+    </div>
+    <div class="about-right-col">
+        <div class="about-text">
+            <h1>About Us</h1>
+            <span class="square">
+            </span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a beatae, accusantium commodi quam sunt quos, modi doloremque voluptate est ex sed laborum cum placeat reiciendis quisquam, ipsam excepturi corrupti!</p><br><br>
+            <div class="line">
+                <span class="line-1"></span><br>
+                <span class="line-2"></span><br>
+                <span class="line-3"></span>
+            </div>
+            <h2>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a beatae, accusantium commodi quam sunt quos"</h2>
+        </div>
+    </div>
+</section>
+
+<!----Features---->
+<section id="features">
+    <div class="feature-row">
+        <div class="feature-col">
+            <img src="images/pic-1.png">
+            <h4>Feature Title</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="feature-col">
+            <img src="images/pic-2.png">
+            <h4>Feature Title</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="feature-col">
+            <img src="images/pic-3.png">
+            <h4>Feature Title</h4>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+
+    <div class="feature-btn">
+        <div class="line">
+            <span class="line-1"></span><br>
+            <span class="line-2"></span><br>
+            <span class="line-3"></span>
+        </div>
+        <button class="common-btn">Start</button>
+    </div>
+
+</section>
+
+<!---Techonology--->
+<section id="tech">
+    <div class="container tech-row">
+        <div class="tech-left-col">
+            <div class="tech-text">
+                <h1>TECHNOLOGY</h1>
+                <span class="square"></span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque mollitia voluptatem id consectetur ut. Hic soluta aperiam optio, dolorum ad eligendi vel eaque, sit maxime impedit vitae. Vitae, mollitia asperiores.</p><br>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+        <div class="tech-right-col">
+            <img src="images/course.png">
+        </div>
+    </div>
+
+</section>
+
+<!---Offer---->
+<section id="offer">
+    <div class="about-left-col">
+        <img src="images/offer.png">
+    </div>
+    <div class="about-right-col">
+        <div class="about-text">
+            <h1>Things Placement-connect offers</h1>
+            <span class="square">
+            </span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a beatae, accusantium commodi quam sunt quos, modi doloremque voluptate est ex sed laborum cum placeat reiciendis quisquam, ipsam excepturi corrupti!</p>
+            <div class="line">
+                <span class="line-1"></span><br>
+                <span class="line-2"></span><br>
+                <span class="line-3"></span>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!---team---->
+<section id="team">
+    <div class="wrapper">
+            <h1>Meet The Team</h1>
+        <div class="card_Container">
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="./images/photo1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Bhavya Bhagat <br><span>Back-End Web Developer</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-solid fa-envelope"></i>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="./images/photo2.JPG" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Shikha Gothi<br><span>UI/UX Designer And Website</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-solid fa-envelope"></i>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="./images/photo3.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Kush Jivani<br><span>Front-End Web Developer</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-solid fa-envelope"></i>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="./images/photo4.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Manav Vaishnani <br><span>Front-End Web Developer</span></h3>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i: 1">
+                            <a href="#"><i class="fa-solid fa-envelope"></i>
+                        </li>
+                        <li style="--i: 2">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
 </body>
 </html>
